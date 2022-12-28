@@ -1,0 +1,8 @@
+
+<div  *ngFor="let product of products$ | async; let i = index">
+  <p>
+    {{ product.title }}
+  </p>
+  <img [src]="product.image" width="200px">
+  <button (click)="addCart(product.id)">add to cart</button>
+</div>
